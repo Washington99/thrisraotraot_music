@@ -28,7 +28,7 @@ class Song(models.Model):
     album = models.ForeignKey(Album, on_delete = models.CASCADE)
     song_length = models.CharField(max_length = 10)
     music_video = models.BooleanField(default = False)
-    lyrics = models.TextField(max_length = 1000, blank = True)
+    lyrics = models.TextField(max_length = 10000, blank = True)
     
     def __str__(self):
         return "{} by {}".format(self.song_title, self.artist)
